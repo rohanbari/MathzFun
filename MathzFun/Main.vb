@@ -46,10 +46,11 @@
 
 	Private Sub Clock_Tick(sender As Object, e As EventArgs) Handles Clock.Tick
 		time += 1
-		Label2.Text = time.ToString + " / 60 seconds elapsed"
+		Label2.Text = time.ToString + " / 30 seconds elapsed"
 
-		If time = 10 Then
+		If time = 30 Then
 			Clock.Stop()
+			time = 0
 
 			Button1.Enabled = True
 			Button2.Enabled = False
